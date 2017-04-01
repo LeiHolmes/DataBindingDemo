@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="mybean"
+            type="com.sherlock.databindingdemo.Person" />
+
+        <variable
+            name="presenter"
+            type="com.sherlock.databindingdemo.SimpleActivity.Presenter" />
+    </data>
+    <!--name:提供数据的bean；type:bean的类名-->
+    <LinearLayout
+        android:id="@+id/activity_simple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.sherlock.databindingdemo.SimpleActivity">
+
+        <ViewStub
+            android:id="@+id/main_viewstub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/viewstub_layout" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入内容"
+            android:onTextChanged="@{presenter.onTextChanged}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@{mybean.name}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@{mybean.sex}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@{mybean.sex}"
+            android:visibility="@{mybean.isShow?View.VISIBLE:View.GONE}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="按钮1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> presenter.onButtonClick(mybean)}"
+            android:text="按钮2" />
+        <!--兰姆达表达式-->
+        <include
+            layout="@layout/include_layout"
+            bind:mybean="@{mybean}" />
+    </LinearLayout>
+</layout>
