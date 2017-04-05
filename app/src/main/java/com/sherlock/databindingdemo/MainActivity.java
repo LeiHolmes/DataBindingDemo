@@ -18,10 +18,10 @@ public class MainActivity extends Activity {
     public void onButtonClick(View view) {
         switch (view.getId()) {
             case R.id.button_simple:
-                startActivity(new Intent(this, SimpleActivity.class));
+                startActivity(new Intent(this, SimpleActivity.class));//简单实现数据绑定
                 break;
             case R.id.button_list:
-                startActivity(new Intent(this, RecyclerActivity.class));
+                startActivity(new Intent(this, RecyclerActivity.class));//RecyclerView实现数据绑定
                 break;
         }
     }

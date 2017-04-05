@@ -11,14 +11,13 @@ import android.databinding.ObservableBoolean;
 public class Person extends BaseObservable {
     private String name;
     private String sex;
-    public ObservableBoolean isShow;
+    public ObservableBoolean isFired;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                '}';
+    public Person(String name, String sex, boolean isFired) {
+        this.name = name;
+        this.sex = sex;
+        this.isFired = new ObservableBoolean();
+        this.isFired.set(isFired);
     }
 
     @Bindable
@@ -42,19 +41,13 @@ public class Person extends BaseObservable {
 //        notifyChange();
     }
 
-    public Person(String name, String sex) {
-        this.name = name;
-        this.sex = sex;
-        isShow = new ObservableBoolean();
-        isShow.set(false);
-    }
-
     @Bindable
-    public ObservableBoolean getIsShow() {
-        return isShow;
+    public ObservableBoolean getIsFired() {
+        return isFired;
     }
 
-    public void setIsShow(boolean isshow) {
-        isShow.set(isshow);
+    public void setIsFired(boolean isFired) {
+        this.isFired.set(isFired);
     }
+
 }

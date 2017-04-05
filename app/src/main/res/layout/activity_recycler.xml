@@ -7,7 +7,7 @@
 
         <variable
             name="presenter"
-            type="com.sherlock.databindingdemo.RecyclerActivity.Presenter" />
+            type="com.sherlock.databindingdemo.RecyclerActivity.PresenterRecycle" />
     </data>
 
     <LinearLayout
@@ -15,17 +15,25 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClickAddItem}"
-            android:text="Add item" />
+            android:orientation="horizontal">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClickRemoveItem}"
-            android:text="Remove item" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{presenter.onClickAddItem}"
+                android:text="Add item" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{presenter.onClickRemoveItem}"
+                android:text="Remove item" />
+        </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"

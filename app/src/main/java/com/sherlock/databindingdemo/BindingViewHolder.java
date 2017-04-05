@@ -4,9 +4,9 @@ import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 
 /**
- * Description:
+ * Description:   数据绑定形式的ViewHolder
  * author         xulei
- * Date           2017/3/17
+ * Date           2017/4/1
  */
 
 public class BindingViewHolder<T extends ViewDataBinding> extends RecyclerView.ViewHolder {

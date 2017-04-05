@@ -11,7 +11,7 @@ import com.sherlock.databindingdemo.databinding.ActivitySimpleBinding;
 
 
 public class SimpleActivity extends Activity {
-    private Person person = new Person("ShylockXu", "男");
+    private Person person = new Person("ShylockXu", "男", false);
     private ActivitySimpleBinding binding;
 
     @Override
@@ -19,7 +19,7 @@ public class SimpleActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_simple);
-        binding.setMybean(person);
+        binding.setPerson(person);
 //        binding.setVariable(BR.person,person);
         binding.setPresenter(new Presenter());
     }
@@ -28,8 +28,8 @@ public class SimpleActivity extends Activity {
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             person.setName(s.toString());
             person.setSex(s.toString());
-            person.setIsShow(!person.isShow.get());
-//            binding.setMybean(person);
+            person.setIsFired(!person.isFired.get());
+//            binding.setPerson(person);
         }
 
         public void onClick(View view) {
