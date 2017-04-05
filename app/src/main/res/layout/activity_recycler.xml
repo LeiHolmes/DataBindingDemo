@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.sherlock.databindingdemo.RecyclerActivity">
+    tools:context="com.sherlock.databindingdemo.recycler.RecyclerActivity">
 
     <data>
 
         <variable
             name="presenter"
-            type="com.sherlock.databindingdemo.RecyclerActivity.PresenterRecycle" />
+            type="com.sherlock.databindingdemo.recycler.RecyclerActivity.PresenterRecycle" />
     </data>
 
     <LinearLayout

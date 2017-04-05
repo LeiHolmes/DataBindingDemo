@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.sherlock.databindingdemo.recycler.RecyclerActivity;
+import com.sherlock.databindingdemo.simple.SimpleActivity;
+
 public class MainActivity extends Activity {
 
     @Override

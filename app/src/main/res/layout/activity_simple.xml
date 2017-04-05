@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -12,7 +13,7 @@
 
         <variable
             name="presenter"
-            type="com.sherlock.databindingdemo.SimpleActivity.Presenter" />
+            type="com.sherlock.databindingdemo.simple.SimpleActivity.Presenter" />
     </data>
     <!--name:提供数据的bean；type:bean的类名-->
     <LinearLayout
@@ -20,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.sherlock.databindingdemo.SimpleActivity">
+        tools:context="com.sherlock.databindingdemo.simple.SimpleActivity">
 
         <ViewStub
             android:id="@+id/main_viewstub"

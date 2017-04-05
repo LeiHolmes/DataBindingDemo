@@ -1,4 +1,4 @@
-package com.sherlock.databindingdemo;
+package com.sherlock.databindingdemo.recycler;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -7,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.sherlock.databindingdemo.Person;
+import com.sherlock.databindingdemo.R;
 
 import java.util.ArrayList;
 import java.util.List;

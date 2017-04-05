@@ -1,4 +1,4 @@
-package com.sherlock.databindingdemo;
+package com.sherlock.databindingdemo.simple;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.sherlock.databindingdemo.Person;
+import com.sherlock.databindingdemo.R;
 import com.sherlock.databindingdemo.databinding.ActivitySimpleBinding;
 
 
