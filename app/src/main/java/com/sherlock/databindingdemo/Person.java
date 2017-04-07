@@ -12,12 +12,20 @@ public class Person extends BaseObservable {
     private String name;
     private String sex;
     public ObservableBoolean isFired;
+    public String avator;
 
     public Person(String name, String sex, boolean isFired) {
         this.name = name;
         this.sex = sex;
         this.isFired = new ObservableBoolean();
         this.isFired.set(isFired);
+    }
+
+    public Person(String name, String sex) {
+        this.name = name;
+        this.sex = sex;
+        this.isFired = new ObservableBoolean();
+        this.isFired.set(false);
     }
 
     @Bindable
@@ -50,4 +58,12 @@ public class Person extends BaseObservable {
         this.isFired.set(isFired);
     }
 
+    @Bindable
+    public String getAvator() {
+        return avator;
+    }
+
+    public void setAvator(String avator) {
+        this.avator = avator;
+    }
 }
