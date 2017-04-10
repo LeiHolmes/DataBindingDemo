@@ -14,6 +14,8 @@ import com.squareup.picasso.Picasso;
  */
 
 public class CustomBindingAdapter {
+    //不能加app，加上会报错找不到setter
+//    @BindingAdapter({"app:imageUrl", "app:placeholder"})
     @BindingAdapter({"imageUrl", "placeholder"})
     public static void setImageUrl(ImageView view, String url, Drawable drawable) {
         Picasso.with(view.getContext()).load(url).placeholder(drawable).into(view);
