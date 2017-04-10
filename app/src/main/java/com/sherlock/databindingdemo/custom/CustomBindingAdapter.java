@@ -2,9 +2,10 @@ package com.sherlock.databindingdemo.custom;
 
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 
 /**
  * Description:
@@ -13,8 +14,9 @@ import com.bumptech.glide.Glide;
  */
 
 public class CustomBindingAdapter {
-    @BindingAdapter({"app:imageUrl", "app:placeholder"})
-    public static void loadImgUrl(ImageView view, String url, Drawable drawable) {
-        Glide.with(view.getContext()).load(url).placeholder(drawable).into(view);
+    @BindingAdapter({"imageUrl", "placeholder"})
+    public static void setImageUrl(ImageView view, String url, Drawable drawable) {
+        Picasso.with(view.getContext()).load(url).placeholder(drawable).into(view);
+        Log.e("imageUrl", url);
     }
 }
