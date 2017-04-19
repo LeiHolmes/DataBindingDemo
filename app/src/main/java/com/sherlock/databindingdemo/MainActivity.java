@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-import com.sherlock.databindingdemo.custom.CustomActivity;
+import com.sherlock.databindingdemo.setter.SetterActivity;
 import com.sherlock.databindingdemo.recycler.RecyclerActivity;
 import com.sherlock.databindingdemo.simple.SimpleActivity;
 
@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(this, RecyclerActivity.class));//RecyclerView实现数据绑定
                 break;
             case R.id.button_custom:
-                startActivity(new Intent(this, CustomActivity.class));//自定义
+                startActivity(new Intent(this, SetterActivity.class));//自定义
                 break;
         }
     }

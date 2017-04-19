@@ -1,4 +1,4 @@
-package com.sherlock.databindingdemo.custom;
+package com.sherlock.databindingdemo.setter;
 
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso;
  * Date           2017/4/5
  */
 
-public class CustomBindingAdapter {
+public class SetterBindingAdapter {
     //不能加app，加上会报错找不到setter
 //    @BindingAdapter({"app:imageUrl", "app:placeholder"})
     @BindingAdapter({"imageUrl", "placeholder"})

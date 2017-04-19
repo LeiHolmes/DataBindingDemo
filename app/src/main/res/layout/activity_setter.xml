@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.sherlock.databindingdemo.custom.CustomActivity">
+    tools:context="com.sherlock.databindingdemo.setter.SetterActivity">
 
     <data>
 
@@ -21,6 +21,5 @@
             app:imageUrl="@{person.getAvator}"
             app:placeholder="@{@drawable/ic_launcher}" />
 
-        <!--app:placeholder="@{@mipmap/ic_launcher}"-->
     </RelativeLayout>
 </layout>

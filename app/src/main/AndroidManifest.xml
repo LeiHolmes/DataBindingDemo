@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".recycler.RecyclerActivity" />
         <activity android:name=".simple.SimpleActivity" />
-        <activity android:name=".custom.CustomActivity"></activity>
+        <activity android:name=".setter.SetterActivity"></activity>
     </application>
 
 </manifest>
