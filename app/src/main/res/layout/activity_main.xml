@@ -19,10 +19,18 @@
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
         android:text="List" />
+
     <Button
         android:id="@+id/button_custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
         android:text="Setter" />
+
+    <Button
+        android:id="@+id/button_two_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClick"
+        android:text="TwoWay" />
 </LinearLayout>

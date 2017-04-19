@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".recycler.RecyclerActivity" />
         <activity android:name=".simple.SimpleActivity" />
-        <activity android:name=".setter.SetterActivity"></activity>
+        <activity android:name=".setter.SetterActivity" />
+        <activity android:name=".twoway.TwoWayActivity" />
     </application>
 
 </manifest>

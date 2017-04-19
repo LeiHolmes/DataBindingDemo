@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sherlock.databindingdemo.twoway.TwoWayActivity">
+
+    <data>
+
+        <variable
+            name="twoWayBean"
+            type="com.sherlock.databindingdemo.twoway.TwoWayBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="请输入用户名"
+            android:inputType="textNoSuggestions"
+            android:padding="15dp"
+            android:text="@={twoWayBean.name}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:text="@={twoWayBean.password}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/hello(twoWayBean.name)}" />
+    </LinearLayout>
+</layout>

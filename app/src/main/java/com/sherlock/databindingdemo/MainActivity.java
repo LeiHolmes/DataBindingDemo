@@ -9,6 +9,7 @@ import android.view.Window;
 import com.sherlock.databindingdemo.setter.SetterActivity;
 import com.sherlock.databindingdemo.recycler.RecyclerActivity;
 import com.sherlock.databindingdemo.simple.SimpleActivity;
+import com.sherlock.databindingdemo.twoway.TwoWayActivity;
 
 public class MainActivity extends Activity {
 
@@ -29,6 +30,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.button_custom:
                 startActivity(new Intent(this, SetterActivity.class));//自定义
+                break;
+            case R.id.button_two_way:
+                startActivity(new Intent(this, TwoWayActivity.class));//双向绑定
                 break;
         }
     }
