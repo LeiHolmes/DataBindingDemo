@@ -11,15 +11,24 @@
             type="com.sherlock.databindingdemo.Person" />
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             app:imageUrl="@{person.getAvator}"
             app:placeholder="@{@drawable/ic_launcher}" />
 
-    </RelativeLayout>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@{@color/red}"/>
+        
+    </LinearLayout>
 </layout>
