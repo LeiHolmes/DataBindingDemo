@@ -46,7 +46,7 @@ public class SetterBindingAdapter {
         return new ColorDrawable(color);
     }
 
-    @InverseBindingAdapter(attribute = "android:text")
+    @InverseBindingAdapter(attribute = "android:text") 
     public static String getTextString(TextView view) {
         return view.getText().toString();
     }
