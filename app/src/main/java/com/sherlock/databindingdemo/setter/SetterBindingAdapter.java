@@ -32,10 +32,22 @@ public class SetterBindingAdapter {
      */
     @BindingAdapter({"imageUrl", "placeholder"})
     public static void setImageUrl(ImageView view, String url, Drawable drawable) {
-        Picasso.with(view.getContext()).load(url).placeholder(drawable).into(view);
-        Log.e("imageUrl", url);
         //@BindingAdapter({"app:imageUrl", "app:placeholder"})
         //不能加app，加上会报错找不到setter
+        Picasso.with(view.getContext()).load(url).placeholder(drawable).into(view);
+        Log.e("imageUrl", url);
+    }
+
+    /**
+     * 防止死循环的set处理
+     */
+    @BindingAdapter("android:text")
+    public static void setText(TextView view, CharSequence text) {
+        final CharSequence oldText = view.getText();
+        if (oldText.equals(text)) {
+            return;
+        }
+        view.setText(text);
     }
 
     /**
@@ -46,7 +58,7 @@ public class SetterBindingAdapter {
         return new ColorDrawable(color);
     }
 
-    @InverseBindingAdapter(attribute = "android:text") 
+    @InverseBindingAdapter(attribute = "android:text")
     public static String getTextString(TextView view) {
         return view.getText().toString();
     }

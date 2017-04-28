@@ -26,9 +26,13 @@
         <View
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="15dp"
             android:layout_gravity="center_horizontal"
-            android:background="@{@color/red}"/>
-        
+            android:layout_marginTop="15dp"
+            android:background="@{@color/red}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{person.name}" />
     </LinearLayout>
 </layout>
