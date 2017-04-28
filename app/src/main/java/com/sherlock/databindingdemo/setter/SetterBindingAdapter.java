@@ -8,6 +8,8 @@ import android.databinding.InverseBindingAdapter;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,12 +44,20 @@ public class SetterBindingAdapter {
      * 防止死循环的set处理
      */
     @BindingAdapter("android:text")
-    public static void setText(TextView view, CharSequence text) {
-        final CharSequence oldText = view.getText();
-        if (oldText.equals(text)) {
-            return;
+    public static void setText(View view, CharSequence text) {
+        if (view instanceof TextView) {
+            final CharSequence oldText = ((TextView) view).getText();
+            ((TextView) view).setText(text);
+            if (oldText.equals(text)) {
+                return;
+            }
+        } else if (view instanceof EditText) {
+            final CharSequence oldText = ((EditText) view).getText();
+            ((EditText) view).setText(text);
+            if (oldText.equals(text)) {
+                return;
+            }
         }
-        view.setText(text);
     }
 
     /**

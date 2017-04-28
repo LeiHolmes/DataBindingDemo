@@ -6,9 +6,15 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="person"
             type="com.sherlock.databindingdemo.Person" />
+
+        <variable
+            name="presenter"
+            type="com.sherlock.databindingdemo.setter.SetterActivity.Presenter" />
     </data>
 
     <LinearLayout
@@ -16,10 +22,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="切换" />
+
         <ImageView
+            android:id="@+id/avater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:visibility="@{person.isFired ? View.VISIBLE : View.GONE}"
             app:imageUrl="@{person.getAvator}"
             app:placeholder="@{@drawable/ic_launcher}" />
 
@@ -32,7 +46,19 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@{person.name}" />
+            android:layout_height="wrap_content"
+            android:text="@{person.name}"
+            android:visibility="@{avater.visibility}" />
+
+        <CheckBox
+            android:id="@+id/showSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{person.sex}"
+            android:visibility="@{showSex.checked ? View.VISIBLE : View.GONE}" />
     </LinearLayout>
 </layout>
