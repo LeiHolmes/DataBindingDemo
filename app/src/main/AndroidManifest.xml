@@ -19,6 +19,7 @@
         <activity android:name=".simple.SimpleActivity" />
         <activity android:name=".setter.SetterActivity" />
         <activity android:name=".twoway.TwoWayActivity" />
+        <activity android:name=".lambda.LambdaActivity"></activity>
     </application>
 
 </manifest>

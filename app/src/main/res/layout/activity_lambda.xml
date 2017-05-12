@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sherlock.databindingdemo.lambda.LambdaActivity">
+
+    <data>
+
+        <variable
+            name="person"
+            type="com.sherlock.databindingdemo.Person" />
+
+        <variable
+            name="presenter"
+            type="com.sherlock.databindingdemo.lambda.LambdaActivity.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{person.name}"
+            android:onClick="@{() -> presenter.onPersonClick(person)}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> presenter.onPersonLongClick(person, context)}"
+            android:onFocusChange="@{(v, fcs) -> presenter.onFocusChange(person)}"
+            android:text="@{person.sex}"/>
+    </LinearLayout>
+</layout>

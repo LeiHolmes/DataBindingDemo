@@ -33,4 +33,10 @@
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
         android:text="TwoWay" />
+    <Button
+        android:id="@+id/button_lambda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClick"
+        android:text="lambda" />
 </LinearLayout>
