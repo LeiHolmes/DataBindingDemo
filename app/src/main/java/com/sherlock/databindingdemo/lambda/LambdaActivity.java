@@ -30,9 +30,5 @@ public class LambdaActivity extends Activity {
         public void onPersonLongClick(Person person, Context context) {
             Toast.makeText(LambdaActivity.this, "onPersonLongClick", Toast.LENGTH_SHORT).show();
         }
-
-        public void onFocusChange(Person person) {
-            Toast.makeText(LambdaActivity.this, "onFocusChange", Toast.LENGTH_SHORT).show();
-        }
     }
 }

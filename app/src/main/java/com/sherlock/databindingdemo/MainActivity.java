@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.sherlock.databindingdemo.animation.AnimationActivity;
 import com.sherlock.databindingdemo.lambda.LambdaActivity;
 import com.sherlock.databindingdemo.setter.SetterActivity;
 import com.sherlock.databindingdemo.recycler.RecyclerActivity;
@@ -37,6 +38,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.button_lambda:
                 startActivity(new Intent(this, LambdaActivity.class));//Lambda表达式
+                break;
+            case R.id.button_animation:
+                startActivity(new Intent(this, AnimationActivity.class));//Lambda表达式
                 break;
         }
     }

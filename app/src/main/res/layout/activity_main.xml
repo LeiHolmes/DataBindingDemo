@@ -39,4 +39,10 @@
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
         android:text="lambda" />
+    <Button
+        android:id="@+id/button_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClick"
+        android:text="animation" />
 </LinearLayout>

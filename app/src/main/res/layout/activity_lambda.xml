@@ -29,7 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{(v) -> presenter.onPersonLongClick(person, context)}"
-            android:onFocusChange="@{(v, fcs) -> presenter.onFocusChange(person)}"
             android:text="@{person.sex}"/>
     </LinearLayout>
 </layout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sherlock.databindingdemo.animation.AnimationActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isShowImg"
+            type="Boolean" />
+
+        <variable
+            name="presenter"
+            type="com.sherlock.databindingdemo.animation.AnimationActivity.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onCheckedChanged="@{presenter.onCheckedChanged}" />
+        <!--onCheckedChanged是DataBindingAdapter支持的-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="@{isShowImg ? View.VISIBLE : View.GONE}" />
+    </LinearLayout>
+</layout>
