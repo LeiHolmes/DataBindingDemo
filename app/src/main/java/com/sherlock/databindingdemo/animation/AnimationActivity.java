@@ -1,12 +1,12 @@
 package com.sherlock.databindingdemo.animation;
 
+import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.databinding.OnRebindCallback;
 import android.databinding.ViewDataBinding;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import com.sherlock.databindingdemo.R;
 import com.sherlock.databindingdemo.databinding.ActivityAnimationBinding;
 
-public class AnimationActivity extends AppCompatActivity {
+public class AnimationActivity extends Activity {
     private ActivityAnimationBinding binding;
 
     @Override
