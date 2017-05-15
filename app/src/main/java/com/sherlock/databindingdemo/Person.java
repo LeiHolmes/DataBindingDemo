@@ -5,7 +5,9 @@ import android.databinding.Bindable;
 import android.databinding.ObservableBoolean;
 
 /**
- * Created by e-eduspace01 on 2017/2/15.
+ * Description:   
+ * author         xulei
+ * Date           2017/2/15 16:16
  */
 
 public class Person extends BaseObservable {
