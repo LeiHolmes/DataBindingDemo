@@ -1,18 +1,18 @@
 # DataBindingDemo
 Android开发DataBinding数据绑定demo  
-### 目录：  
+### 目录  
 #### simple：
-　　DataBinding基本用法、常量、变量、事件的绑定，ViewStub、include的使用演示。
+DataBinding基本用法、常量、变量、事件的绑定，ViewStub、include的使用演示。
 #### setter：
-　　DataBinding中BindingMethods、BindingAdapter、BindingConversion、InverseBindingAdapter等Setter的使用演示。  
+DataBinding中BindingMethods、BindingAdapter、BindingConversion、InverseBindingAdapter等Setter的使用演示。  
 #### twoway：
-　　DataBinding中双向绑定的用法演示。
+DataBinding中双向绑定的用法演示。
 #### lambda：
-　　Lambda表达式的基本使用方法演示。  
+Lambda表达式的基本使用方法演示。  
 #### animation：
-　　DataBinding中使用动画的方法演示。 
+DataBinding中使用动画的方法演示。 
 #### recycler：
-　　RecyclerView+DataBinding实现列表视图的绑定演示。  
+RecyclerView+DataBinding实现列表视图的绑定演示。  
 ### 遇见问题  
 
 #### 问题1：  
